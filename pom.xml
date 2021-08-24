@@ -12,7 +12,7 @@
 	<groupId>com.github.xhrg.spring</groupId>
 	<artifactId>spring-ext-note</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-ext-show</name>
+	<name>spring-ext-note</name>
 	<description>展示spring扩展接口的执行过程和扩展demo</description>
 	<properties>
 		<java.version>1.8</java.version>
