@@ -1,10 +1,10 @@
 package com.github.xhrg.spring.helper;
 
-public class MyStack {
+public class Line {
 
 	private int num;
 
-	private String fileName;
+	private String className;
 
 	private String method;
 
@@ -16,12 +16,12 @@ public class MyStack {
 		this.num = num;
 	}
 
-	public String getFileName() {
-		return fileName;
+	public String getClassName() {
+		return className;
 	}
 
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
+	public void setClassName(String className) {
+		this.className = className;
 	}
 
 	public String getMethod() {

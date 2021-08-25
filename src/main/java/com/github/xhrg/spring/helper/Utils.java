@@ -9,7 +9,25 @@ public class Utils {
 
 	private static Set<String> alreadyPrint = new HashSet<String>();
 
-	private static List<MyStack> list = new ArrayList<MyStack>();
+	private static List<Line> list = new ArrayList<Line>();
+
+	public static void addLine() {
+		Exception exception = new Exception();
+		int x = 0;
+		StackTraceElement[] stt = exception.getStackTrace();
+		for (int i = stt.length - 1; i > 0; i--) {
+			StackTraceElement s = stt[i];
+			Line line = new Line();
+			line.setClassName(s.getClassName());
+			line.setMethod(s.getMethodName());
+			if (i != stt.length - 1 && i > 0 && line.getClassName().equals(stt[i + 1].getClassName())) {
+				line.setNum(x);
+			} else {
+				line.setNum(++x);
+			}
+			list.add(line);
+		}
+	}
 
 	public static void printStack() {
 		Exception exception = new Exception();
@@ -26,32 +44,20 @@ public class Utils {
 		System.err.println("================分割线======================");
 		System.err.println("");
 		System.err.println("");
-		if (list.size() == 0) {
-			int x = 0;
-			StackTraceElement[] stt = exception.getStackTrace();
-			for (int i = stt.length - 1; i > -1; i--) {
-				StackTraceElement s = stt[i];
-				MyStack myStack = new MyStack();
-				myStack.setFileName(s.getClassName());
-				myStack.setMethod(s.getMethodName());
-				if (i != stt.length - 1 && i > 0 && myStack.getFileName().equals(stt[i + 1].getClassName())) {
-					myStack.setNum(x);
-				} else {
-					myStack.setNum(x++);
-				}
-				list.add(myStack);
-			}
-		}
 	}
 
 	public static void printCC() {
-		for (MyStack myStack : list) {
-			System.out.println(nkk(myStack.getNum()) + myStack.getFileName() + "::" + myStack.getMethod());
+		for (Line line : list) {
+			String str = nkk(line.getNum()) + line.getClassName() + "::" + line.getMethod();
+			if (str.contains("com.github")) {
+				str = str + "【自定义扩展点】";
+			}
+			System.out.println(str);
 		}
 	}
 
 	public static String nkk(int i) {
-		i = i * 2;
+		i = i * 4;
 		StringBuilder sb = new StringBuilder();
 		while (i-- > 0) {
 			sb.append(" ");
