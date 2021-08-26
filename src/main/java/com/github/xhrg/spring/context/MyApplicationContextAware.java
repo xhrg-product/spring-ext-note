@@ -12,7 +12,7 @@ public class MyApplicationContextAware implements ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        Utils.printStack();
+        Utils.printStackV2();
         Utils.addLine();
     }
 

@@ -8,10 +8,9 @@ import com.github.xhrg.spring.helper.Utils;
 @Component
 public class MyInitializingBean implements InitializingBean {
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        Utils.printStack();
-        Utils.addLine();
-    }
-
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		Utils.printStack();
+		Utils.addLine();
+	}
 }

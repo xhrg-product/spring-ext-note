@@ -16,7 +16,7 @@ public class MyPropertyResourceConfigurer extends PropertyResourceConfigurer {
     protected void processProperties(ConfigurableListableBeanFactory beanFactory, Properties props)
             throws BeansException {
         Utils.printStack();
-        Utils.addLine();
+//        Utils.addLine();
     }
 
 }
