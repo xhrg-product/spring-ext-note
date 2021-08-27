@@ -1,5 +1,8 @@
 package com.github.xhrg.spring.note.helper.tree;
 
+import static org.fusesource.jansi.Ansi.ansi;
+import static org.fusesource.jansi.Ansi.Color.RED;
+
 import java.util.List;
 
 import com.github.xhrg.spring.note.helper.Line;
@@ -81,9 +84,10 @@ public class LineTree {
     private static void printLine(Line line) {
         String str = nkk(line.getNum()) + line.getClassName() + "::" + line.getMethod();
         if (str.contains("com.github")) {
-            str = str + "【自定义扩展点】";
+            System.out.println(ansi().eraseScreen().fgRed().bold().a(str).reset());
+        } else {
+            System.out.println(str);
         }
-        System.out.println(str);
     }
 
     public static String nkk(int i) {

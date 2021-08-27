@@ -61,11 +61,11 @@ public class Utils {
         }
         alreadyPrint.add(key);
         for (int i = 1; i < stackTraceElements.length; i++) {
-            System.err.println(stackTraceElements[i]);
+            System.out.println(stackTraceElements[i]);
         }
-        System.err.println("================分割线======================");
-        System.err.println("");
-        System.err.println("");
+        System.out.println("================分割线======================");
+        System.out.println("");
+        System.out.println("");
     }
 
     public static void printCC() {
