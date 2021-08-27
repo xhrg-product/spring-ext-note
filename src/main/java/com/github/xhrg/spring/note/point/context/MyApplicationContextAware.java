@@ -1,11 +1,11 @@
-package com.github.xhrg.spring.context;
+package com.github.xhrg.spring.note.point.context;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
-import com.github.xhrg.spring.helper.Utils;
+import com.github.xhrg.spring.note.helper.Utils;
 
 @Component
 public class MyApplicationContextAware implements ApplicationContextAware {
@@ -15,5 +15,4 @@ public class MyApplicationContextAware implements ApplicationContextAware {
         Utils.printStackV2();
         Utils.addLine();
     }
-
 }
