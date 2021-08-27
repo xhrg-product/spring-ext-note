@@ -86,7 +86,7 @@ public class LineTree {
         if (str.contains("com.github")) {
             System.out.println(ansi().eraseScreen().fgRed().bold().a(str).reset());
         } else {
-            System.out.println(str);
+            System.out.println(ansi().eraseScreen().fgBlue().a(str).reset());
         }
     }
 
