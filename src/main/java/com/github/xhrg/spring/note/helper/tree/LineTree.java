@@ -1,11 +1,8 @@
 package com.github.xhrg.spring.note.helper.tree;
 
 import static org.fusesource.jansi.Ansi.ansi;
-import static org.fusesource.jansi.Ansi.Color.RED;
 
 import java.util.List;
-
-import com.github.xhrg.spring.note.helper.Line;
 
 public class LineTree {
 

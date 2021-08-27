@@ -3,8 +3,6 @@ package com.github.xhrg.spring.note.helper.tree;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.xhrg.spring.note.helper.Line;
-
 public class LineNode {
 
     private Line line;

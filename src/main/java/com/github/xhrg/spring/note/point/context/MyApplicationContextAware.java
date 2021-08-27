@@ -5,14 +5,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
-import com.github.xhrg.spring.note.helper.Utils;
+import com.github.xhrg.spring.note.helper.LineUtils;
 
 @Component
 public class MyApplicationContextAware implements ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        Utils.printStackV2();
-        Utils.addLine();
+        LineUtils.toTree(false);
     }
 }
