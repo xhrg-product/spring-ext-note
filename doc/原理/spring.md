@@ -32,3 +32,9 @@ public class Company{
 * bean 水流
 * beanFactory A地点到B地点，对水流的整体控制。
 * BeanPostProcessor 我用这个来代表所有的过滤，包括一层，二层。
+
+---
+
+AbstractApplicationContext::refresh
+* 执行：BeanFactoryPostProcessor
+* 执行：BeanPostProcessor
