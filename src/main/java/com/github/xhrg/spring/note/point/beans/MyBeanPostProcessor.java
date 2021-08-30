@@ -12,6 +12,12 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         LineUtils.toTree(false);
+        if (beanName.toLowerCase().contains("myfactory") || beanName.toLowerCase().contains("person")) {
+            System.out.println(1);
+        }
+        if(bean.getClass().getName().toString().contains("person")) {
+            System.out.println(1);
+        }
         return bean;
     }
 

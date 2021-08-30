@@ -8,10 +8,10 @@ import com.github.xhrg.spring.note.helper.tree.LineTree;
 @SpringBootApplication
 public class SpringExtNoteApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		SpringApplication.run(SpringExtNoteApplication.class, args);
-		LineTree.printTreeNode();
-		System.exit(1);
-	}
+        SpringApplication.run(SpringExtNoteApplication.class, args);
+        LineTree.printTreeNode();
+        System.exit(1);
+    }
 }

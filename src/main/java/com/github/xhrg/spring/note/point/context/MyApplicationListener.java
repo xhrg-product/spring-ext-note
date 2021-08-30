@@ -13,5 +13,4 @@ public class MyApplicationListener implements ApplicationListener<ContextRefresh
     public void onApplicationEvent(ContextRefreshedEvent event) {
         LineUtils.toTree(true);
     }
-
 }

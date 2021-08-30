@@ -29,8 +29,8 @@ public class Company{
 大家注意到没有，spring的每一层都是可以进行扩展的。你可以扩展出一个4，4里面也可以有N层。
 
 所以这里要讲到spring的三大核心
-* bean 水流
-* beanFactory A地点到B地点，对水流的整体控制。
+* bean 水流中的水。
+* beanFactory 生成水流，按照代码，我们生成水流就可以控制他的起始层。A地点到B地点，对水流的整体控制。
 * BeanPostProcessor 我用这个来代表所有的过滤，包括一层，二层。
 
 ---
